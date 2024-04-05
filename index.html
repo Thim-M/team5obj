@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta name="viewport" content="device-width,initial-scale=1.0" />
+    <style>
+      body {
+        background-color:white;
+        padding: 0;
+        margin:120px;
+      }
+      
+      .container {
+        position: relative;
+        margin: 50px 0 0 20px;
+        display: inline-block;
+        vertical-align: top;
+      }
+      .pic1,
+      .pic2,
+      .pic3 {
+        width: 300px;
+        height: 250px;
+        backface-visibility: hidden;
+        opacity: 1;
+        transition: 0.5s ease;
+        display:block;
+        justify-content:space-between;
+        margin-top:0px;
+      }
+      .overlay {
+        position: absolute;
+        top: 0;
+        right: 0;
+        left: 0;
+        bottom: 0;
+        width:100%;
+        opacity: 0;
+        transform: rotate(-0deg)skewX(-0deg);
+        transition: 0.3s ease;
+      }
+      .container:hover .pic1,
+      .container:hover .pic2,
+      .container:hover .pic3 {
+        opacity: 0.3;
+      }
+      .container:hover .overlay {
+        height:100%;
+        opacity: 0.5;
+      }
+      .text1,
+      .text2,
+      .text3 {
+        color: white;
+        font-family: sans-serif;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        padding: 25px;
+        width: 250px; /* Adjusted width to match picture height */
+        height: 250px; /* Adjusted height to match picture height */
+        background-color:rgb(10, 248, 10);
+        text-align: justify;
+      }
+
+    </style>
+  </head>
+  <body>
+    <p>
+      Group 5
+      <ol>
+        <li>Mun Thim</li>
+        <li>Din Chanmey</li>
+        <li>Bin Lin</li>
+        <li>Doung Monyoudom</li>
+        <li>Tham Tavy</li>
+      </ol>
+    </p>
+    <p style="text-align: center; font-family: arial; font-size: 16px">
+      <b>Welcome to Early Child Education, KEL International School</b>
+    </p>
+    <div class="container">
+        <img src="Time Table.jpg" class="pic1" alt="Time Table" width="300" height="250">
+        <div class="overlay">
+            <div class="text1">Timetable</br>
+                          Our service time is flexible so that you are able to choose an option which is best-suited with your family and children.</br>
+                          Learn more </div>
+        </div>
+    </div>
+
+    <div class="container">
+        <img
+          src="Pricing.jpg"
+          class="pic2"
+          alt="Our Pricing"
+          width="300"
+          height="250"
+        />
+        <div class="overlay">
+          <div class="text2">
+            Our Pricing<br />
+            We provide you various payment options to match with your family
+            budget plan for your child’s care and education. <br />
+            Learn more
+          </div>
+        </div>
+      </div>
+      <div class="container">
+        <img
+          src="Gallery.jpg"
+          class="pic3"
+          alt="Gallery"
+          width="300"
+          height="250"
+        >
+        <div class="overlay">
+          <div class="text3">
+            Our Gallery<br />
+            To see how active and happy your children are in our child-friendly
+            setting, please go through into our gallery. <br />
+            Learn more
+          </div>
+        </div>
+    <script>
+        const myPic1={
+            img:"Time Table.jpg",
+            txt:"Timetable<br /> Our service time is flexible so that you are able to choose an option which is best-suited with your family and children.<br />    Learn more",
+        };
+   document.getElementsByClassName("pic1").src=myPic1.img;
+   document.getElementsByClassName("text1").src=myPic1.tx;
+        const myPic2={
+            img:"Pricing.jpg",
+            txt:"Our Pricing</br> We provide you various payment options to match with your family budget plan for your child’s care and education. </br> Learn more"
+   };
+   document.getElementById("pic2").src=myPic2.img;
+   document.getElementById("text2").src=myPic2.txt;
+        const myPic3={
+            img:"Pricing.jpg",
+            txt:" Our Gallery</br>To see how active and happy your children are in our child-friendly setting, please go through into our gallery.  </br> Learn more"
+        };
+   document.getElementById("pic3").src=myPic3.img;
+   document.getElementById("text3").src=myPic3.txt;
+   </script>
+  </body>
+</html>
